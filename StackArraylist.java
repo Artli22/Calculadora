@@ -12,20 +12,20 @@ public class StackArraylist<E> {
     }
 
     public E pop() {
-        if (isEmpty()) {
+        if (empty()) {
             throw new IllegalStateException("La pila está vacía");
         }
         return stack.remove(stack.size() - 1);
     }
 
     public E peek() {
-        if (isEmpty()) {
+        if (empty()) {
             throw new IllegalStateException("La pila está vacía");
         }
         return stack.get(stack.size() - 1);
     }
 
-    public boolean isEmpty() {
+    public boolean empty() {
         return stack.isEmpty();
     }
 
