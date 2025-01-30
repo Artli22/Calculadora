@@ -7,6 +7,9 @@
  * Luis Hernandez - 
 */
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,7 +20,7 @@ public class Main {
         System.out.println("***** Calculadora Postfix - versión 1.3 *****");
 
         while (menu) {
-            System.out.println("1. Ingresar expresión matematica (a b +)");
+            System.out.println("1. Leer archivo con expresión");
             System.out.println("2. Salir");
             System.out.print("Seleccione una opción: ");
 
@@ -26,12 +29,12 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    System.out.print("Ingrese la expresión en notación postfix: ");
-                    String expresion = scanner.nextLine();
-
-                    try {
-                        int resultado = calculadora.evaluate(expresion);
-                        System.out.println("Resultado: " + resultado);
+                    try (BufferedReader br = new BufferedReader(new FileReader("datos.txt"))) {
+                        String linea;
+                        while ((linea = br.readLine()) != null) {
+                            int resultado = calculadora.evaluate(linea);
+                            System.out.println("Resultado: " + resultado);
+                        }
                     } catch (Exception e) {
                         System.out.println("Error: " + e.getMessage());
                     }
