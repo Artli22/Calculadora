@@ -1,3 +1,11 @@
+/** Universidad del Valle de Guatemala 
+ * Algoritmos y Estructura de Datos
+ * Hoja de Trabajo no.2: Programa de Evaluacion Postfix
+ * Grupo no: 12
+ * Arturo Lima - 24683
+ * Ronald Catun - 19789
+ * Luis Hernandez - 
+*/
 public class CalculadoraPostfix {
     // Atributos
     private Stack<Integer> stack;
@@ -7,6 +15,7 @@ public class CalculadoraPostfix {
         this.stack = new StackVector1<>();
     }
 
+    // Metodo de evaluacion de la expresion ingresada
     public int evaluate(String expression) {
         String[] tokens = expression.split(" ");
         for (String token : tokens) {
@@ -35,10 +44,12 @@ public class CalculadoraPostfix {
         return stack.pop();
     }
 
+    // Metodo validacion de signo 
     private boolean isOperator(String token) {
         return token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/") || token.equals("%");
     }
 
+    // Metodos para operaciones correspondientes al signo 
     private int applyOperator(int a, int b, String operator) {
         switch (operator) {
             case "+":

@@ -1,3 +1,11 @@
+/** Universidad del Valle de Guatemala 
+ * Algoritmos y Estructura de Datos
+ * Hoja de Trabajo no.2: Programa de Evaluacion Postfix
+ * Grupo no: 12
+ * Arturo Lima - 24683
+ * Ronald Catun - 19789
+ * Luis Hernandez - 
+*/
 import java.util.Scanner;
 
 public class Main {
@@ -29,11 +37,11 @@ public class Main {
                     }
                     break;
                 case 2:
-                    System.out.println("Saliendo del programa. ¡Gracias por usar la calculadora!");
+                    System.out.println("Saliendo del programa.");
                     menu = false;
                     break;
                 default:
-                    System.out.println("Opción no válida. Intente de nuevo.");
+                    System.out.println("Opción no válida.");
                     break;
             }
         }
