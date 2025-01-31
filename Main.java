@@ -31,6 +31,7 @@ public class Main {
 
             switch (opcion) {
                 case 1:
+                    // Intenta leer el archivo y devuelve un error si no puede
                     try (BufferedReader br = new BufferedReader(new FileReader("datos.txt"))) {
                         String linea;
                         while ((linea = br.readLine()) != null) {
