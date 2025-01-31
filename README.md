@@ -1,7 +1,5 @@
 Arturo Lima - 24683
-
 Ronald Catún - 19789 
-
 Luis Pedro Hernandez - 24337
 
 Algoritmos y Estructura de Datos
@@ -35,11 +33,9 @@ Es necesario realizar una calculadora utilizando la función de Vector e impleme
 Postfix y producir el resultado de la misma.
 
 UML
-![UML Centro de Eventos (2)](https://github.com/user-attachments/assets/6ca0d833-dea4-4625-8799-132d14259d70)
-
+![UML Centro de Eventos](https://github.com/user-attachments/assets/a10f6c48-3bfc-47f0-857c-7b35b310c4c2)
 
 Diagrama de Secuencia
-![Pink Sequence Chart (1)](https://github.com/user-attachments/assets/95f33876-55f7-4ed8-a932-2913797c6e4e)
-
+![Pink Sequence Chart](https://github.com/user-attachments/assets/9a47240e-ad3f-4b10-a5be-35463afbacb2)
 
 
