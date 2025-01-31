@@ -8,14 +8,21 @@
 */
 public class CalculadoraPostfix implements Interfaz {
     // Atributos
+    /**
+     *
+     */
     private Stack<Integer> stack;
 
     // Métodos
+    /**
+     * 
+     */
     public CalculadoraPostfix() {
         this.stack = new StackVector1<>();
     }
 
     // Metodo de evaluacion de la expresion ingresada
+    @Override
     public int evaluar(String expression) {
         String[] tokens = expression.split(" ");
         for (String token : tokens) {
@@ -44,7 +51,8 @@ public class CalculadoraPostfix implements Interfaz {
         return stack.pop();
     }
 
-    // Metodos para operaciones correspondientes al signo 
+    // Metodos para operaciones correspondientes al signo
+    @Override
     public int operar(int operandoA, int operandoB, String operador) {
         switch (operador) {
             case "+":
