@@ -35,5 +35,7 @@ Postfix y producir el resultado de la misma.
 UML
 ![UML Centro de Eventos](https://github.com/user-attachments/assets/a10f6c48-3bfc-47f0-857c-7b35b310c4c2)
 
+Diagrama de Secuencia
+![Pink Sequence Chart](https://github.com/user-attachments/assets/9a47240e-ad3f-4b10-a5be-35463afbacb2)
 
 
