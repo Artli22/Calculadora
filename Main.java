@@ -4,17 +4,16 @@
  * Grupo no: 12
  * Arturo Lima - 24683
  * Ronald Catun - 19789
- * Luis Hernandez - 
+ * Luis Hernandez - 24337
 */
 import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CalculadoraPostfix calculadora = new CalculadoraPostfix(); 
+        Interfaz calculadora = new CalculadoraPostfix(); 
         boolean menu = true;
 
         System.out.println("***** Calculadora Postfix - versión 1.3 *****");
@@ -32,7 +31,7 @@ public class Main {
                     try (BufferedReader br = new BufferedReader(new FileReader("datos.txt"))) {
                         String linea;
                         while ((linea = br.readLine()) != null) {
-                            int resultado = calculadora.evaluate(linea);
+                            int resultado = calculadora.evaluar(linea);
                             System.out.println("Resultado: " + resultado);
                         }
                     } catch (Exception e) {

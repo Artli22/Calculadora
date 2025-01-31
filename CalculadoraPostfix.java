@@ -4,9 +4,9 @@
  * Grupo no: 12
  * Arturo Lima - 24683
  * Ronald Catun - 19789
- * Luis Hernandez - 
+ * Luis Hernandez - 24337
 */
-public class CalculadoraPostfix {
+public class CalculadoraPostfix implements Interfaz {
     // Atributos
     private Stack<Integer> stack;
 
@@ -16,17 +16,17 @@ public class CalculadoraPostfix {
     }
 
     // Metodo de evaluacion de la expresion ingresada
-    public int evaluate(String expression) {
+    public int evaluar(String expression) {
         String[] tokens = expression.split(" ");
         for (String token : tokens) {
-            if (isOperator(token)) {
+            if (token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/") || token.equals("%")) {
                 if (stack.size() < 2) {
                     throw new IllegalStateException("No hay suficientes operandos para realizar la operación");
                 }
                 else {
                     int operand2 = stack.pop();
                     int operand1 = stack.pop();
-                    stack.push(applyOperator(operand1, operand2, token));
+                    stack.push(operar(operand1, operand2, token));
                 }
             }
             else {
@@ -44,29 +44,24 @@ public class CalculadoraPostfix {
         return stack.pop();
     }
 
-    // Metodo validacion de signo 
-    private boolean isOperator(String token) {
-        return token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/") || token.equals("%");
-    }
-
     // Metodos para operaciones correspondientes al signo 
-    private int applyOperator(int a, int b, String operator) {
-        switch (operator) {
+    public int operar(int operandoA, int operandoB, String operador) {
+        switch (operador) {
             case "+":
-                return a + b;
+                return operandoA + operandoB;
             case "-":
-                return a - b;
+                return operandoA - operandoB;
             case "*":
-                return a * b;
+                return operandoA * operandoB;
             case "/":
-                if (b == 0) {
+                if (operandoB == 0) {
                     throw new ArithmeticException("División entre cero");
                 }
-                return a / b;
+                return operandoA / operandoB;
             case "%":
-                return a % b;
+                return operandoA % operandoB;
             default:
-                throw new IllegalArgumentException("Operador no soportado: " + operator);
+                throw new IllegalArgumentException("Operador no soportado: " + operador);
         }
     }
 }

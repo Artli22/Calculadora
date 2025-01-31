@@ -8,7 +8,7 @@ public class TestStackVector1 {
     // Prueba comprobar vacio de stack
     @Test 
     public void testEvaluate_PeakEmpty(){
-        StackVector1<Integer> stack = new StackVector1<>();
+        Stack<Integer> stack = new StackVector1<>();
         Exception exception = assertThrows(IllegalStateException.class, () -> stack.pop());
         assertEquals("Stack is empty", exception.getMessage());
     }  
@@ -16,7 +16,7 @@ public class TestStackVector1 {
     //Prueba comprobar metodo peek/revisar 
     @Test
     public void testEvaluate_peek() {
-    StackVector1<Integer> stack = new StackVector1<>();
+    Stack<Integer> stack = new StackVector1<>();
     stack.push(30);
     stack.push(40);
     Integer peekedValue = stack.peek();
